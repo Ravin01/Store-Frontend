@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { backendUrl } from "../../config";
+import '../Styles/ForgotPass.css'
 
 const Forgot = () => {
   const [hold, setHold] = useState(false);

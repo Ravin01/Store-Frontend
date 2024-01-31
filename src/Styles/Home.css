@@ -4,15 +4,101 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #040404;
+    background-color: white;
     color: white;
 }
 .home-sideNav{
     height: 100vh;
     width: 20vw;
-    border: 1px solid white;
+}
+.home-sideNav-open{
+    height: 100vh;
+    width: 20vw;
 }
 .home-main{
     height: 100vh;
     width: 80vw;
+}
+
+
+@media screen and (max-width: 980px){
+    .home-sideNav{
+        width: 25vw;
+        height: 100vh;
+    }
+    .home-sideNav-open{
+        width: 25vw;
+        height: 100vh;
+    }
+    .home-main{
+        height: 100vh;
+        width: 75vw;
+    }
+    
+}
+@media screen and (max-width: 850px){
+    .home-sideNav{
+        display: none;
+        width: 25vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .home-sideNav-open{
+        display: block;
+        width: 30vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .home-main{
+        height: 100vh;
+        width: 100vw;
+    }
+}
+@media screen and (max-width: 650px){
+    .home-sideNav{
+        display: none;
+        width: 45vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .home-sideNav-open{
+        display: block;
+        width: 45vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .home-main{
+        height: 100vh;
+        width: 100vw;
+    }
+}
+@media screen and (max-width: 450px){
+    .home-sideNav{
+        display: none;
+        width: 60vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .home-sideNav-open{
+        display: block;
+        width: 60vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .home-main{
+        height: 100vh;
+        width: 100vw;
+    }
 }

@@ -3,7 +3,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { backendUrl } from "../../config";
 import { Navigate } from "react-router-dom";
-
+import '../Styles/ResetPass.css'
 
 const Reset = () => {
   const [reset, setReset] = useState(false)

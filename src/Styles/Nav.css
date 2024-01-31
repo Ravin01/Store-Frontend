@@ -1,8 +1,212 @@
 .nav-container{
-    border: 1px solid white;
-    width: 80vw;
-    height: 10vh;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #605bff;
+    padding: 0px 20px;
+}
+.nav-header{
+    height: 50%;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-bars{
+    display: none;
+}
+.nav-search-input{
+    height: 100%;
+    width: 90%;
+    border-radius: 10px;
+    padding: 0px 10px;
+    border: none;
+}
+.nav-search-input:focus{
+    outline: none;
+}
+.nav-events-con{
+    width: 25%;
+    height: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+}
+.nav-admin-btn-add-product{
+    border: none;
+    border-radius: 6px;
+    padding: 5px 10px;
+    /* position: relative; */
+}
+.nav-add-product-con{
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    background-color: #040404;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 25%;
+    height: 45%;
+    border-radius: 10px;
+    border: 2px solid #6b50ff;
+    box-shadow: 3px 3px 15px black;
+}
+.nav-add-product-input{
+    width: 70%;
+    height: 10%;
+    border-radius: 8px;
+    border: none;
+    padding: 0px 8px;
+}
+.nav-add-product-input:focus{
+    outline: none;
+    border: 2px solid #605bff;
+}
+.nav-add-product-btn{
+    border: none;
+    border-radius: 5px;
+    padding: 7px 20px;
+    background-color: #605bff;
+    cursor: pointer;
+    color: white;
+}
+.nav-cart-con, .nav-history-con{
+    font-size: 20px;
+    cursor: pointer;
+}
+.nav-cart-con{
+    display: flex;
+}
+.nav-cart-count{
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    margin: -14px 0px 0px -12px;
+}
+
+@media screen  and (max-width: 850px){
+    .nav-bars{
+        display: block;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-add-product-con{
+        position: absolute;
+        top: 70px;
+        right: 30px;
+        background-color: #040404;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 45%;
+        height: 45%;
+        border-radius: 10px;
+        border: 2px solid #6b50ff;
+        box-shadow: 3px 3px 15px black;
+    }
+}
+@media screen  and (max-width: 650px){
+    .nav-bars{
+        display: block;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-header{
+        width: 60%;
+    }
+    .nav-search-input{
+        height: 90%;
+    }
+    .nav-events-con{
+        width: 30%;
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .nav-admin-btn-add-product{
+        border: none;
+        border-radius: 6px;
+        padding: 5px 10px;
+        font-size: 12px;
+        /* position: relative; */
+    }
+    .nav-add-product-con{
+        position: absolute;
+        top: 70px;
+        right: 30px;
+        background-color: #040404;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 65%;
+        height: 45%;
+        border-radius: 10px;
+        border: 2px solid #6b50ff;
+        box-shadow: 3px 3px 15px black;
+    }
+    .nav-cart-con, .nav-history-con{
+        font-size: 15px;
+        cursor: pointer;
+    }
+}
+@media screen  and (max-width: 450px){
+    .nav-bars{
+        display: block;
+        font-size: 18px;
+        cursor: pointer;
+    }
+    .nav-header{
+        width: 50%;
+    }
+    .nav-search-input{
+        height: 80%;
+        width: 90%;
+        border-radius: 6px;
+        font-size: 10px;
+        margin: 0px 0px 0px 10px;
+    }
+    .nav-events-con{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .nav-admin-btn-add-product{
+        border: none;
+        border-radius: 6px;
+        padding: 5px 10px;
+        font-size: 10px;
+        /* position: relative; */
+    }
+    .nav-add-product-con{
+        position: absolute;
+        top: 70px;
+        right: 30px;
+        background-color: #040404;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 85%;
+        height: 40%;
+        border-radius: 10px;
+        border: 2px solid #6b50ff;
+        box-shadow: 3px 3px 15px black;
+    }
+    .nav-add-product-input{
+        border-radius: 6px;
+        font-size: 10px;
+    }
+    .nav-cart-con, .nav-history-con{
+        font-size: 15px;
+        cursor: pointer;
+    }
 }

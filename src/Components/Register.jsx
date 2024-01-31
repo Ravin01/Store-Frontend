@@ -60,37 +60,52 @@ const Register = () => {
   return (
     <div className="login-container">
       
-    <h2>Create a new account</h2>
+    <h2 className="login-heading" >Create a new account</h2>
     <form action="" onSubmit={handleSubmit} className="form-container">
-      <input
-        type="text"
-        placeholder="Enter your name"
-        name="userName"
-        id="userName"
-        required
-        onChange={handleChange}
-        value={input.userName}
-      />
-      <input
-        type="email"
-        placeholder="Enter your email"
-        name="userEmail"
-        id="userEmail"
-        required
-        onChange={handleChange}
-        value={input.userEmail}
-      />
-      <input
-        type="password"
-        placeholder="Enter your Password"
-        name="password"
-        id="password"
-        required
-        onChange={handleChange}
-        value={input.password}
-      />
-      <button type="submit">Register</button>
-    </form>
+
+        <input
+          type="email"
+          placeholder="Enter your name"
+          name="userName"
+          id="userName"
+          required
+          onChange={handleChange}
+          value={input.userName}
+          className="login-input"
+        />
+        <input
+          type="email"
+          placeholder="Enter your email"
+          name="userEmail"
+          id="userEmail"
+          required
+          onChange={handleChange}
+          value={input.userEmail}
+          className="login-input"
+        />
+
+        <input
+          type="password"
+          placeholder="Enter your Password"
+          name="password"
+          id="password"
+          required
+          onChange={handleChange}
+          value={input.password}
+          className="login-input"
+        />
+        
+
+        {loading ? (
+          <div className="login-loader-con">
+            <div className="login-loader"></div>
+          </div>
+        ) : (
+          <button type="submit" className="login-button">
+            Sign Up
+          </button>
+        )}
+      </form>
     <ToastContainer
       position="top-right"
       autoClose={5000}
@@ -103,21 +118,7 @@ const Register = () => {
       pauseOnHover
       theme="dark"
     />
-    {loading && (
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          width: "100%",
-        }}
-      >
-        <div className="login-loader-con">
-          <p>Registering</p>
-          <div className="login-loader"></div>
-        </div>
-      </div>
-    )}
+    
     <div className="form-link">
       <p>Already have an Account ? </p>
       <Link to="/auth/login" className="form-link-register">

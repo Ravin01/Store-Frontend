@@ -4,6 +4,7 @@ import { backendUrl } from "../../config";
 import { Link, Navigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import '../Styles/Login.css'
 
 const Login = () => {
   const [input, setInput] = useState({
@@ -70,8 +71,9 @@ const Login = () => {
   }
   return (
     <div className="login-container">
-      <h2>Welcome Back !</h2>
+      <h2 className="login-heading" >Welcome Back !</h2>
       <form action="" onSubmit={handleSubmit} className="form-container">
+
         <input
           type="email"
           placeholder="Enter your email"
@@ -80,7 +82,9 @@ const Login = () => {
           required
           onChange={handleChange}
           value={input.userEmail}
+          className="login-input"
         />
+
         <input
           type="password"
           placeholder="Enter your Password"
@@ -89,21 +93,23 @@ const Login = () => {
           required
           onChange={handleChange}
           value={input.password}
+          className="login-input"
         />
-        <p className="login-form-link">
-          Forgot Password ?{" "}
-          <Link
-            to={"/forgotPassword"}
-            style={{
-              textDecoration: "none",
-              color: "rgb(55, 55, 240)",
-              fontSize: "15px",
-            }}
-          >
-            Click here
+        <div>
+          <Link to={"/forgotPassword"} className="login-form-link">
+            Forgot Password ?
           </Link>
-        </p>
-        <button type="submit">Login</button>
+        </div>
+
+        {loading ? (
+          <div className="login-loader-con">
+            <div className="login-loader"></div>
+          </div>
+        ) : (
+          <button type="submit" className="login-button">
+            Sign In
+          </button>
+        )}
       </form>
       <ToastContainer
         position="top-right"
@@ -117,21 +123,7 @@ const Login = () => {
         pauseOnHover
         theme="dark"
       />
-      {loading && (
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            width: "100%",
-          }}
-        >
-          <div className="login-loader-con">
-            <p>Checking</p>
-            <div className="login-loader"></div>
-          </div>
-        </div>
-      )}
+     
       <div className="form-link">
         <p>Don't have an Account ? </p>
         <Link to="/auth/register" className="form-link-register">
