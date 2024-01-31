@@ -64,7 +64,7 @@ const Register = () => {
     <form action="" onSubmit={handleSubmit} className="form-container">
 
         <input
-          type="email"
+          type="text"
           placeholder="Enter your name"
           name="userName"
           id="userName"
