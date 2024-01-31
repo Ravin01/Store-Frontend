@@ -103,7 +103,9 @@
     display: block;
     font-size: 12px;
 }
-
+.products-con-empty{
+    color: black;
+}
 
 
 @media screen and (max-width: 650px) {
@@ -237,6 +239,10 @@
         border: 2px solid #605bff;
     }
     .nav-cart-count{
+        font-size: 10px;
+    }
+    .products-con-empty{
+        color: black;
         font-size: 10px;
     }
 }
